@@ -5,11 +5,11 @@ The controller takes 3 inputs from sonar sensors called inputLEFT, inputFRONT, a
 
 <img src="https://github.com/Lavr18/MR-Obstacle-Avoidance/blob/master/inputSensors.png" width="408" height = "325">
 
-The memebrship function for each input is as follows. X axis represents the distance to an obstacle in mm.
+The membership function for each input is as follows. X-axis represents the distance to an obstacle in mm.
 
 ![Alt text](https://github.com/Lavr18/MR-Obstacle-Avoidance/blob/master/inputMFforGit.PNG)
 
-The outputs are the robot's motors. The membesrship function for each output is shown below. X axis is the motor speed in mm/s.
+The outputs are the robot's motors. The membership function for each output is shown below. X-axis is the motor speed in mm/s.
 
 ![Alt text](https://github.com/Lavr18/MR-Obstacle-Avoidance/blob/master/outputMFforGit.PNG)
 
