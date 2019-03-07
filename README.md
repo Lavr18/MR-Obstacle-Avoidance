@@ -2,5 +2,6 @@
 The fuzzy-logic based controller for the Mobile Robot to avoid obstacles based on the data from its sonar sensors.
 
 The table of fuzzy rules.
-![Screenshot](fuzzyRules.png)
+
+![Alt text](fuzzyRules.png)
 
