@@ -3,5 +3,5 @@ The fuzzy-logic based controller for the Mobile Robot to avoid obstacles based o
 
 The table of fuzzy rules.
 
-![Alt text](fuzzyRules.png)
+![Alt text](https://github.com/Lavr18/MR-Obstacle-Avoidance/blob/master/fuzzyRules.PNG)
 
