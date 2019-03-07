@@ -3,7 +3,7 @@ The fuzzy-logic based controller for the Mobile Robot to avoid obstacles based o
 
 The controller takes 3 inputs from sonar sensors called inputLEFT, inputFRONT, and inputRIGHT.
 
-![Alt text](https://github.com/Lavr18/MR-Obstacle-Avoidance/blob/master/inputSensors.PNG)
+![Alt text](https://github.com/Lavr18/MR-Obstacle-Avoidance/blob/master/inputSensors.png)
 InputFRONT is the minimum between two front sensors.
 
 
