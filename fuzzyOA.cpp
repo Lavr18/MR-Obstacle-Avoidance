@@ -1,12 +1,19 @@
-// Fuzzy logic controller for the mobile robot.
-// Obstacle avoidance behaviour.
-// The main function consists of the following parts:
-//	1) Robot hardware initialization
-//	2) Sensor data filtering
-//	3) Fuzzy logic controller
-//		- Fuzzification
-//		- Inference Engine (includes the rule base and input //		processing)
-//		- Defuzzification
+/* Fuzzy logic controller for the mobile robot.
+ * By Aliaksei Laurynovich
+ * For Intelligent Systems and Robotics module
+ * Univerisity of Essex
+ * 15.12.2018
+ */
+
+/* 
+ * Obstacle avoidance behaviour.
+ * The main function consists of the following parts:
+ *	1) Robot hardware initialization
+ *	2) Sensor data filtering
+ *	3) Fuzzy logic controller
+ *		- Fuzzification
+ *		- Inference Engine (includes the rule base and input processing)
+ */		- Defuzzification
 
 
 #include <stdio.h>
@@ -28,7 +35,10 @@ float fsBlendObstacleAvoidLOW(int input);
 
 int main(int argc, char **argv)
 {
-	//////////////--------ROBOT HARDWARE INITIALIZATIONS--------////////////////
+	///////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////--------1) HARDWARE INITIALIZATIONS--------///////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////
+	
 	Aria::init();
 	ArRobot robot;
 	ArPose pose;
@@ -64,10 +74,8 @@ int main(int argc, char **argv)
 
 	while (true)
 	{
-		// run
-
 		////////////////////////////////////////////////////////////////////////////////////////////
-		////////////////////-----------DATA COLLECTION AND FILTERING-----------/////////////////////
+		////////////////////-----------2) DATA COLLECTION AND FILTERING-----------///////////////////
 		////////////////////////////////////////////////////////////////////////////////////////////
 
 		//Obtain SONAR measurements
@@ -88,7 +96,7 @@ int main(int argc, char **argv)
 
 		ArUtil::sleep(20); //wait for 20ms
 
-						   //Readings 2
+		//Readings 2
 		for (int i = 0; i < 8; i++)
 		{
 			sonarSensor[i] = robot.getSonarReading(i);
@@ -101,7 +109,7 @@ int main(int argc, char **argv)
 
 		ArUtil::sleep(20); //wait for 20ms
 
-						   //Readings 3
+		//Readings 3
 		for (int i = 0; i < 8; i++)
 		{
 			sonarSensor[i] = robot.getSonarReading(i);
@@ -114,7 +122,7 @@ int main(int argc, char **argv)
 
 		ArUtil::sleep(20); //wait for 20ms
 
-						   //Readings 4
+		//Readings 4
 		for (int i = 0; i < 8; i++)
 		{
 			sonarSensor[i] = robot.getSonarReading(i);
@@ -127,7 +135,7 @@ int main(int argc, char **argv)
 
 		ArUtil::sleep(20); //wait for 20ms
 
-						   //Readings 5
+		//Readings 5
 		for (int i = 0; i < 8; i++)
 		{
 			sonarSensor[i] = robot.getSonarReading(i);
@@ -140,7 +148,7 @@ int main(int argc, char **argv)
 
 		ArUtil::sleep(20); //wait for 20ms
 
-						   //Readings 6
+		//Readings 6
 		for (int i = 0; i < 8; i++)
 		{
 			sonarSensor[i] = robot.getSonarReading(i);
@@ -153,7 +161,7 @@ int main(int argc, char **argv)
 
 
 
-									 //Filter the arrays with s5, s4, S3, S2 readings
+		//Filter the arrays with s5, s4, S3, S2 readings
 		remove5000(6, s5Vector);
 		remove5000(6, s4Vector);
 		remove5000(6, s3Vector);
@@ -215,7 +223,7 @@ int main(int argc, char **argv)
 		////////////////////////////////////////////////////////////////////////////////////////////
 
 
-		/* 2. Obstacle avoidance behaviour */
+		/* Obstacle avoidance behaviour */
 
 		// Reset fuzzy output variables
 		for (int i = 0; i < 3; i++)
@@ -260,8 +268,8 @@ int main(int argc, char **argv)
 
 
 		/*
-		* /////////// INFERENCE ENGINE ////////////
-		*/
+		 * /////////// INFERENCE ENGINE ////////////
+		 */
 
 		/* The obstacle avoidance rule base. */
 		min_ = 0; //store the minimum fs in min
@@ -698,7 +706,7 @@ int main(int argc, char **argv)
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////
-/////////////-----------HELPER FUNCTIONS-----------//////////////////
+////////////////////////-----------HELPER FUNCTIONS-----------//////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 //Find 5000 readings and replace them to 0
