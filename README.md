@@ -5,6 +5,9 @@ The controller takes 3 inputs from sonar sensors called inputLEFT, inputFRONT, a
 
 <img src="https://github.com/Lavr18/MR-Obstacle-Avoidance/blob/master/inputSensors.png" width="408 height = 325">
 
+The memebrship function for each input is as follows.
+
+<img src="https://github.com/Lavr18/MR-Obstacle-Avoidance/blob/master/inputMFforGit.png" width="408 height = 325">
 
 
 The table of fuzzy rules.
