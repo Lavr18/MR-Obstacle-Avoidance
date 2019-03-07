@@ -17,3 +17,7 @@ The table of fuzzy rules.
 
 ![Alt text](https://github.com/Lavr18/MR-Obstacle-Avoidance/blob/master/fuzzyRules.PNG)
 
+The link to the video where the robot avoids obstacles: https://www.youtube.com/watch?v=iqcaPnnepPo
+
+The link to the full report: https://drive.google.com/file/d/1pkQx3OK0kQITQ3sZTtjMU8FuwTggx_yA/view
+
