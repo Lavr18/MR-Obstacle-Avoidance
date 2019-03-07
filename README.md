@@ -9,6 +9,7 @@ The memebrship function for each input is as follows.
 
 ![Alt text](https://github.com/Lavr18/MR-Obstacle-Avoidance/blob/master/inputMFforGit.PNG)
 
+The membesrship function for each output 
 
 The table of fuzzy rules.
 
